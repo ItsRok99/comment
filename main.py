@@ -142,7 +142,7 @@ async def create_comment(comment: Comment):
 
     # Make an HTTP request to get the users data
     async with httpx.AsyncClient() as client:
-        response = await client.get("http://127.0.0.1:8000/users/")
+        response = await client.get("https://user-xojp.onrender.com/users/")
 
     # Check if the specified user_id exists in the response data
     users_data = response.json()
@@ -251,7 +251,7 @@ async def update_comment(comment_id: str, updated_comment: CommentUpdate):
 
     # Make an HTTP request to get the users data
     async with httpx.AsyncClient() as client:
-        response = await client.get("http://127.0.0.1:8000/users/")
+        response = await client.get("https://user-xojp.onrender.com/users/")
 
     # Check if the specified user_id exists in the response data
     users_data = response.json()
